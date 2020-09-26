@@ -1,0 +1,33 @@
+{% extends 'home/base.html' %}
+
+{% block title %}
+Bike Rider
+{% endblock title %}
+
+{% block css %}
+
+{% endblock css %}
+
+{% block body %}
+<div class="container">
+<h1 class="my-3" style="text-align: center;">{{event.heading}}</h1>
+
+<div class="row">
+<img src="/media/{{event.image}}" style="border-radius: 10%; " class=" col-md-4" alt="">
+<div class="col-md-8">
+<p >
+{{event.content}}
+
+    
+</p>
+<h2 >Follow us: </h2><br>
+    <i><a style="font-size: 1.5rem;" href="#">Facebook </a><br>
+    <a style="font-size: 1.5rem;"href="#">Twiter</a><br>
+    <a style="font-size: 1.5rem;" href="#">Instragram</a></i>
+</div>
+<div class="fb-like my-3 mx-4"  data-href="http://127.0.0.1:8000/event-read/{{event.id}}" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true"></div>
+
+</div>
+
+</div>
+{% endblock body %}
