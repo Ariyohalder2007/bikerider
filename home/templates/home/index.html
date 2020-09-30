@@ -1,5 +1,9 @@
 {% extends 'home/base.html' %}
 {% block css %}
+
+<style>
+
+</style>
 {% endblock css %}
 
 {% block title %}
@@ -75,7 +79,7 @@ BikeRiders
 </div>
 
 <div class="jumbotron bg-dark" >
-  <h1 class=" my-4" style="text-align: center; color: white;">Contact Details</h1>
+  <h1 class=" my-2" style="text-align: center; color: white;">Contact Details</h1>
   
   <span class="lead my-4" style="font-weight: bold; color: white;"><h4>Adress:</h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam enim vero dignissimos fugiat sit amet consectetur adipisicing elit. Iusto, veniam!  </span><br><br>
   <span class="lead " style="font-weight: bold; color: white;"><h4 style="display: inline;">Phone: </h4>9123948663</span><br><br>
@@ -93,7 +97,7 @@ BikeRiders
 
  {% for i in Event %}
 
-{% if i.event_date > tday %}
+{% if i.event_date >= tday %}
 <div class="card my-3 mx-3 bg-light" style="margin: auto; display: block;width: 20rem; " >
 
   <img src="/media/{{i.image}}" style="height: 12rem;" class="card-img-top"alt="No Image" />

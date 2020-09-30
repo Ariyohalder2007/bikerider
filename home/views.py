@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Event
 import datetime
+from math import ceil
+
 mydate = datetime.date.today
 
 
@@ -16,7 +18,7 @@ def events(request):
     
     event = Event.objects.all()
     
-    params={'Event':event, 'tday':mydate}
+    params={ 'Event':event, 'tday':mydate}
     return render(request, "home/events.html", params)
 def contact(request):
     

@@ -1,10 +1,29 @@
-{% extends 'home/base.html' %}
-{% block title %}
-Contact Us
-{% endblock title %}
+{% extends 'home/base.html' %} {% block title %} Contact Us {% endblock title %}
 {% block body %}
-<h1>This is contacts page</h1>
-{% endblock body %}
-
-{% block js %}
-{% endblock js %}
+<div class="container">
+    <h1 style="text-align: center;">Contact Us</h1>
+<form method="POST" action="/contact/"> {% csrf_token %}
+    <div class="form-group" style="margin: auto; display: block; width: 50vw;">
+      <label style="display: inline;" for="exampleFormControlInput2"><h5 style="display: inline;
+        margin-right: 5px;">Name:</h5></label> 
+      <input type="name" style="width: 40vw; display: inline-block;" class="form-control" id="exampleFormControlInput2" placeholder="Alok halder">
+    </div>
+    <div class="form-group my-4" style="margin: auto; display: block; width: 50vw;">
+      <label style="display: inline;" for="exampleFormControlInput1"> <h5 style="display: inline; margin-right: 5px;">Email: </h5> </label>
+      <input  type="email" style="width: 40vw; display: inline-block;" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="form-group my-4" style="margin: auto; display: block; width: 50vw;">
+      <label style="display: inline;" for="exampleFormControlInput3"> <h5 style="display: inline; margin-right: 5px;">Phone: </h5> </label>
+      <input  type="email" style="width: 40vw; display: inline-block;" class="form-control" id="exampleFormControlInput3" placeholder="Phone n.o.">
+    </div>
+    
+    
+    <div class="form-group" style="margin: auto; display: block; width: 50vw;">
+      <label for="exampleFormControlTextarea1"> <h5>Reason: </h5></label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+    </div>
+    <button class="btn btn-primary my-4" style="margin: auto; display: block;">Submit</button>
+  </form>
+  </div>
+{% endblock body %} 
+{% block js %} {% endblock js %}
