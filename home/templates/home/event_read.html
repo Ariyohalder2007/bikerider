@@ -17,13 +17,13 @@ Bike Rider
 <div class="col-md-8">
 <p >
 {{event.content}}
-
-    
 </p>
-<h2 >Follow us: </h2><br>
-    <i><a style="font-size: 1.5rem;" href="#">Facebook </a><br>
-    <a style="font-size: 1.5rem;"href="#">Twiter</a><br>
-    <a style="font-size: 1.5rem;" href="#">Instragram</a></i>
+<h6>Event on: {{event.event_date}}</h6>
+<h6>Published on: {{event.publish_date}}</h6>
+<h3 >Follow us: </h3>
+    <i><a style="font-size: 1.2rem;" href="#">Facebook</a><br>
+    <a style="font-size: 1.2rem;"href="#">Twitter</a><br>
+    <a style="font-size: 1.2rem;" href="#">Instragram</a></i>
 </div>
 <div class="fb-like my-3 mx-4"  data-href="http://127.0.0.1:8000/event-read/{{event.id}}" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true"></div>
 
