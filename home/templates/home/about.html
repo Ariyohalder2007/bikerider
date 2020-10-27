@@ -6,10 +6,44 @@ About us
 
 {% block css %}
 <style>
-    body{
-        background: linear-gradient(transparent,lightblue);
-        
+    img{
+        width: 75vw;
+        height: 50vh;
     }
+    blockquote {
+    font-family: Georgia, serif;
+    position: relative;
+    margin: 0.5em;
+    padding: 0.5em 2em 0.5em 3em;
+}
+/* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
+blockquote:before {
+    font-family: Georgia, serif;
+    position: absolute;
+    font-size: 6em;
+    line-height: 1;
+    top: 0;
+    left: 0;
+    content: "\201C";
+}
+blockquote:after {
+    font-family: Georgia, serif;
+    position: absolute;
+   /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+    float:right;
+    font-size:6em;
+    line-height: 1;
+    right:0;
+    bottom:-0.5em;
+    content: "\201D";
+}
+blockquote footer {
+    padding: 0 2em 0 0;
+    text-align:right;
+}
+blockquote cite:before {
+    content: "\2013";
+}
 </style>
 {% endblock css %}
 
@@ -20,6 +54,25 @@ active
 {% block body %}
 <div class="container">
 <h1 class="my-2" style="text-align: center;">About Us </h1>
-<p class="" style="text-align: center; font-weight: bold; font-size: 1.2rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quos aut consequuntur consequatur aspernatur sint, voluptate unde eius. Cum accusamus placeat incidunt facilis exercitationem nisi. Ducimus atque nemo velit perspiciatis, quos ratione numquam, voluptate maiores eaque libero veritatis praesentium provident vel blanditiis. Eos cum nobis possimus fugit animi nostrum blanditiis rem odit cupiditate itaque suscipit ex saepe tenetur consectetur, laudantium inventore voluptatum, dolor placeat veritatis nam eligendi necessitatibus molestias aliquam eveniet. Recusandae animi consequatur explicabo vitae. Rem quae blanditiis esse nisi, eos fugit consequuntur ducimus veniam mollitia dolorum beatae, atque laudantium omnis exercitationem dolor saepe, quidem a harum quam suscipit doloremque sapiente ea! Quam, reiciendis cupiditate. Id alias laboriosam odit excepturi maxime quis velit voluptas omnis beatae sit nulla minus rerum ipsa ut impedit, quibusdam aperiam, nesciunt asperiores labore reprehenderit esse similique amet mollitia aut. Animi quidem soluta reiciendis itaque commodi temporibus magnam, laborum deserunt fugit, repudiandae labore? Magni at, debitis illum laudantium sint placeat culpa. Distinctio illum cupiditate voluptates cumque quaerat et id aperiam commodi obcaecati tempora esse quod ut, itaque dolorem eligendi atque voluptatem? Harum dolor dicta magnam, non odio quos obcaecati labore quam at minima, neque quas, pariatur asperiores dolorum cupiditate. Repudiandae animi amet quas tempora autem alias fugit dolore incidunt deleniti, exercitationem, ducimus cumque magni. Suscipit molestiae quas culpa numquam amet temporibus harum, architecto ab nesciunt distinctio, maxime, ea quo porro vero quam officia? Dolorum dolores tempore adipisci eaque molestiae facere, soluta ullam dolorem aliquam? Cupiditate deserunt officia sapiente quisquam quae placeat? Praesentium quod consectetur repudiandae commodi recusandae, sed distinctio culpa voluptatem vitae, sequi dolore iusto! Qui nemo esse fugit, magni repellat tenetur facere quos cupiditate reiciendis commodi non omnis dolorum. Reprehenderit a impedit minima id fugit veniam, sit ab officiis modi esse tenetur, sed illum, magni molestiae in facere omnis! Quod minus, placeat eveniet deleniti recusandae doloribus at nisi ipsum vel quaerat! Non iusto cumque veniam, temporibus dolorem veritatis molestiae eos mollitia alias assumenda! Est eveniet, consectetur at sint labore tenetur voluptates corporis ipsam quibusdam iusto alias natus pariatur expedita perferendis nobis doloribus eum vel eos explicabo aspernatur quasi libero? Illo tempore maiores magnam deleniti minima aperiam! Culpa molestias est perferendis provident earum aperiam cumque tempora quae vitae, nobis tempore iure ut voluptas atque error expedita quos labore deleniti quo voluptate dolores sapiente dolore impedit. Maiores aspernatur accusantium numquam veritatis minima quae odio blanditiis illo commodi saepe ullam architecto dolores, harum ut esse asperiores repudiandae temporibus. Est ipsam necessitatibus id numquam sunt voluptatem inventore delectus nulla impedit, ab explicabo repellat ea, officia iste velit laboriosam consectetur voluptate fugiat atque sapiente, cum accusantium labore officiis eius! Quisquam cupiditate eos labore in. Iure odit maiores itaque autem veritatis rerum, totam non magni odio eligendi iusto. Praesentium repudiandae molestias nesciunt enim facere dicta cum itaque ab atque voluptas! Eius quo numquam distinctio inventore optio nostrum illo modi libero illum odit repudiandae ipsum voluptatum unde qui natus ea quisquam, quis reprehenderit placeat neque, doloribus ullam accusamus? Eum beatae omnis, deleniti aut voluptates officia repellat harum exercitationem deserunt quibusdam natus!</p>
+   
+    <blockquote style="text-align: center; font-size: 1.2rem;">
+        <span style="font-size: 1.3rem;">Owner - </span>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quos aut consequuntur consequatur aspernatur sint, voluptate unde eius. Cum accusamus placeat 
+    </blockquote>
+
+<img src="/media/static/test.jpg" alt="">
 </div>
+<br>
+<br>
+<br>
+<div class="container">
+<div class="row">
+    <div class="col-md-6">
+    <p> <h3>Lorem ipsum dolor sit amet</h3> consectetur adipisicing elit. Illo, nemo consequatur? Officia ut exercitationem repellendus, eveniet dolor numquam perspiciatis molestiae magni vitae molestias. Voluptate quam magni tempore tempora reprehenderit placeat quis repellendus perspiciatis unde? Lorem ipsum sit amet consectetur adipisicing elit. Ratione saepe optio eveniet natus at vitae exercitationem consectetur tenetur assumenda deserunt blanditiis veniam in fugit rerum sequi atque dolor est quos deleniti, molestiae illum culpa amet maxime! Nesciunt tempor at error placeat optio aliquam. Blanditiis eius deserunt illum repellendus?</p>
+    </div>
+    <div class="col-md-6 "><img style="height: 50vh; width: 45vw;" src="/media/static/test.jpg" alt=""></div>
+    </div>
+    </div>
+   
+    
 {% endblock body %}

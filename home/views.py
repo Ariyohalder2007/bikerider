@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, request
 from .models import Event
 import datetime
 from django.core.mail import send_mail
@@ -12,7 +12,11 @@ def index(request):
     
     params={'Event':event, 'tday': mydate}
     return render(request, "home/index.html", params)
-
+def search_event(request):
+    event = Event.objects.all()
+    
+    params={ 'Event':event, 'tday':mydate}
+    return render(request, "home/search_event.html", params)
 
 def events(request):
     
@@ -52,5 +56,6 @@ def event_read(request, myid):
 def about(request):
     return render(request, "home/about.html")
 
-
+def locate(request):
+    return render(request, 'home/locate.html')
 # Create your views here.

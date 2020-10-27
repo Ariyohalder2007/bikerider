@@ -4,7 +4,9 @@
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 <style>
-
+.swiper-slide{
+  width: 22rem !important;
+}
 </style>
 {% endblock css %}
 
@@ -19,7 +21,7 @@
 {% for i in Event %}
 
 {% if i.event_date >= tday %}
-<div class="swiper-slide ">
+<div class="swiper-slide " >
 <div class=" card my-3 bg-light " >
   <img src="/media/{{i.image}}" style="height: 15rem;" class="card-img-top"alt="No Image" />
   <div class="card-body">
@@ -95,7 +97,7 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
  var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3,
+      slidesPerView: 4,
       centeredSlides: true,
       spaceBetween: 30,
       grabCursor: true,
