@@ -243,7 +243,8 @@ document.querySelector(".next").addEventListener("click", () => {
   renderCalendar();
 });
 
-renderCalendar();
+document.querySelector(".prev").click();
+document.querySelector(".next").click();
 
 </script>
 {% endblock js %}
