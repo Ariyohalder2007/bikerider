@@ -2,11 +2,18 @@
 
 {% block css %}
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 <style>
 .swiper-slide{
   width: 22rem !important;
  
+}
+.card-img-top{
+  border-radius: 20px !important;
+}
+.card{
+  background: none !important;
+  border: none !important;
+  outline: none !important;
 }
 </style>
 {% endblock css %}
@@ -23,7 +30,7 @@
 
 {% if i.event_date >= tday %}
 <div class="swiper-slide " >
-<div class=" card my-3 bg-light " >
+<div class=" card my-3 bg-light" >
   <img src="/media/{{i.image}}" style="height: 15rem;" class="card-img-top"alt="No Image" />
   <div class="card-body">
     <h5 class="card-title" >{{i.heading}}</h5>
@@ -62,7 +69,7 @@
   
   {% if i.event_date < tday %}
   <div class="swiper-slide ">
-  <div class=" card my-3 bg-light " >
+  <div class=" card my-3 bg-light" >
     <img src="/media/{{i.image}}" style="height: 15rem;" class="card-img-top"alt="No Image" />
     <div class="card-body">
       <h5 class="card-title" >{{i.heading}}</h5>
@@ -95,7 +102,6 @@
 {% block eventsActive %} active {% endblock eventsActive %}
  {% block js %}
  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
       effect: 'coverflow',
@@ -114,4 +120,5 @@
       },
     });
   </script>
+  
  {% endblock js %}

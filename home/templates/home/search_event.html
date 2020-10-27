@@ -169,7 +169,21 @@ const renderCalendar = () => {
   ).getDay();
 
   const nextDays = 7 - lastDayIndex - 1;
+const Mons=[
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7',
+  '8',
+  '9',
+  '10',
+  '11',
+  '12'
 
+]
   const months = [
     "Jan",
     "Feb",
@@ -205,12 +219,12 @@ const renderCalendar = () => {
         
       days += `
       <form method="get" action="/search_com/">
-        <input name="mydate" value="${date.getFullYear()}-${date.getMonth(i+1)}-${i}" hidden>
+        <input name="mydate" value="${date.getFullYear()}-${Mons[date.getMonth(i)]}-${i}" hidden>
         <div><input type="Submit" value="${i}" style=" background: none; border: none; outline: none; color: white;"></div>
       </form>
       `;
+      console.log(Mons[date.getMonth(i)])
     }
-    // console.log(date.getMonth(i))
   }
 
   for (let j = 1; j <= nextDays; j++) {
