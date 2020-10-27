@@ -4,25 +4,27 @@ from .models import Event
 import datetime
 from django.core.mail import send_mail
 
-mydate = datetime.date.today
+tdate = datetime.date.today
 
 
 def index(request):
     event = Event.objects.all()
     
-    params={'Event':event, 'tday': mydate}
+    params={'Event':event, 'tday': tdate}
     return render(request, "home/index.html", params)
 def search_event(request):
     event = Event.objects.all()
     
-    params={ 'Event':event, 'tday':mydate}
+    
+    params={ 'Event':event, 'tday':tdate}
+    print(tdate)
     return render(request, "home/search_event.html", params)
 
 def events(request):
     
     event = Event.objects.all()
     
-    params={ 'Event':event, 'tday':mydate}
+    params={ 'Event':event, 'tday':tdate}
     return render(request, "home/events.html", params)
 def contact(request):
     if request.method=="POST":
@@ -58,4 +60,19 @@ def about(request):
 
 def locate(request):
     return render(request, 'home/locate.html')
+
+def search_com(request):
+    if request.method=='GET':
+        mydate=request.GET.get('mydate')
+        # print(mydate)
+        event=Event.objects.filter(event_date=mydate)
+        
+        params={
+            'mydate':mydate,
+            'Event':event
+        }
+        print(event)
+        
+
+        return render(request, 'home/search_com.html', params)
 # Create your views here.

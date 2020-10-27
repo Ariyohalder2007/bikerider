@@ -26,12 +26,19 @@
 	  {% endblock homeActive %}">
         <a class="nav-link" href="/">Home </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link {% block eventsActive %}
-	  {% endblock eventsActive %}" href="/events/">Events</a>
-      </li>
-        <a class="nav-link {% block event_searchActive %}
-	  {% endblock event_searchActive %}" href="/search_event/">SearchEvent</a>
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Events
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item {% block eventsActive %}
+	  {% endblock eventsActive %}" href="/events/">Browse Events</a>
+     
+         <a class="dropdown-item {% block event_searchActive %}
+	  {% endblock event_searchActive %}" href="/search_event/">Search Event</a>
+
+          
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link {% block contactActive %}
@@ -45,19 +52,9 @@
         <a class="nav-link {% block locateActive %}
 	  {% endblock locateActive %}" href="/locate/">Locate Us</a>
       </li>
-      {% comment %} <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+    
       
-    </ul> {% endcomment %}
+    </ul> 
     
   </div>
 </nav>

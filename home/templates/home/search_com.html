@@ -1,5 +1,4 @@
-{% extends 'home/base.html' %} {% block title %} BikeRiders {% endblock title %}
-
+{% extends 'home/base.html' %}
 {% block css %}
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -10,18 +9,12 @@
 }
 </style>
 {% endblock css %}
-
 {% block body %}
-
 <div class="container">
-<h1 class="my-2" style="text-align: center;">
-  Our Upcoming Events
-</h1>
 <div class="swiper-container">
   <div class="swiper-wrapper">
 {% for i in Event %}
 
-{% if i.event_date >= tday %}
 <div class="swiper-slide " >
 <div class=" card my-3 bg-light " >
   <img src="/media/{{i.image}}" style="height: 15rem;" class="card-img-top"alt="No Image" />
@@ -44,56 +37,14 @@
 </div>
 
 
-{% endif %}
 
 {% endfor %} 
 </div>
 </div>
 </div>
-</div>
+{% endblock body %}
 
-<div class="container">
-  <h1 class="my-2" style="text-align: center;">
-    Past Events
-  </h1>
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-  {% for i in Event %}
-  
-  {% if i.event_date < tday %}
-  <div class="swiper-slide ">
-  <div class=" card my-3 bg-light " >
-    <img src="/media/{{i.image}}" style="height: 15rem;" class="card-img-top"alt="No Image" />
-    <div class="card-body">
-      <h5 class="card-title" >{{i.heading}}</h5>
-      <h6>Event On: <b>{{i.event_date}}(past event)</b></h6>
-      <p class="card-text">
-        {{i.content|slice:":30"}}
-        ...
-      </p>
-      <p>
-      Published on: {{i.publish_date}}
-    <div class="fb-like" data-href="http://127.0.0.1:8000/event-read/{{i.id}}" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true"></div>
-      </p>
-      
-     <a href="/event-read/{{i.id}}" class="btn btn-primary">Read more</a>
-     
-    </div>
-  </div>
-  </div>
-  
-  
-  {% endif %}
-  
-  {% endfor %} 
-  </div>
-  </div>
-  </div>
-  </div>
-
- {% endblock body %} 
-{% block eventsActive %} active {% endblock eventsActive %}
- {% block js %}
+{% block js %}
  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>

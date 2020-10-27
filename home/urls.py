@@ -10,4 +10,5 @@ urlpatterns = [
     path('event-read/<int:myid>', views.event_read),
     path('search_event/', views.search_event),
     path('locate/', views.locate),
+    path('search_com/', views.search_com),
 ]
