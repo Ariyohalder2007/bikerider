@@ -53,7 +53,7 @@ Search Event
 }
 
 .month p {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .weekdays {
@@ -83,7 +83,7 @@ Search Event
 }
 
 .days div {
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin: 0.3rem;
   width: 5rem;
   height: 5rem;
@@ -109,13 +109,39 @@ Search Event
   background-color: #167e56;
 }
 
+
+
+@media only screen and (max-width: 629px) {
+  /* fix style */
+/* .month p {
+  font-size: 0.8rem;
+}
+.month h1 {
+  font-size: 1rem;
+ 
+}
+.calendar{
+  width: 26rem;
+  height: 828.344px;
+}
+.days div{
+  margin: 0;
+  padding: 0;
+  font-size: .8rem;
+}
+.weekdays{
+font-size: 1rem;
+} */
+}
+
+
 </style>
 {% endblock css %}
 {% block  event_searchActive %}
 active
 {% endblock event_searchActive %}
 {% block body %}
-<div class="container my-2">
+<div class="container my-4">
       <div class="calendar">
         <div class="month">
           <i class="fas fa-angle-left prev"></i>
